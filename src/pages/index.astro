@@ -1,13 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHub from "../components/icons/Github.astro";
+import Mail from "../components/icons/Mail.astro";
 ---
 
-<Layout title="Portfolio Adrián López">
+<Layout 
+title="Portfolio Adrián López - Desarrollador y Programador Web"
+description="Contrata a Adrián López - Desarrollador y Programador Web para ayudar a crear tu aplicación web. Creación de aplicaciones Web."
+>
   <main>
-    <section class="parent w-full lg:w-[740px] mx-auto py-40">
+    <section class="parent w-full lg:w-[740px] mx-auto py-0">
       <img
-        class="img w-12 h-12 rounded-full"
+        class="img size-12 rounded-full"
         src="https://media.licdn.com/dms/image/C5603AQEoBKtVCFskRQ/profile-displayphoto-shrink_800_800/0/1635428384893?e=2147483647&v=beta&t=ShwsElyXwtvWIsPFBin4pslN2yM9J0Up-aO7ow2Qceo"
         alt="Adrian Lopez Foto"
       />
@@ -24,8 +31,41 @@ import Badge from "../components/Badge.astro";
         </div>
       </h2>
       <h3 class="text3 text-white text-xl">
-        2 años de Experiencia. Desarrollador web. De Valladolid, España
+        <span>+2 años de Experiencia.</span>
+        <span class="text-yellow-200/80"> Desarrollador web</span>.
+        <span class="text-purple-100/80"> De Valladolid, España</span>.
+        <span class="opacity-80">En continuo aprendizaje.</span>
       </h3>
+    </section>
+    <nav class="w-full lg:w-[740px] mx-auto py-0">
+      <ul class="w-full lg:w-[740px] mx-auto flex flex-row items-center gap-5">
+        <li>
+          <SocialPill
+            href="https://www.linkedin.com/in/adri%C3%A1n-l%C3%B3pez-desarrollo-web/"
+          >
+            <LinkedInIcon class="size-6"/>
+            LinkedIn
+          </SocialPill>
+        </li>
+        <li>
+          <SocialPill
+            href="https://github.com/Kratogans"
+          >
+            <GitHub class="size-6" />
+            Github
+          </SocialPill>
+        </li>
+        <li>          
+          <SocialPill
+          href="https://github.com/Kratogans"
+        >
+          <Mail class="size-6"  />
+          Email
+        </SocialPill></li>
+      </ul>
+    </nav>
+    <section class="section undefined w-full mx-auto my-40 lg:w-[740px] pt-40 pb-24">
+
     </section>
   </main>
 </Layout>
