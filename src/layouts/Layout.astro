@@ -42,7 +42,7 @@ const { description, title } = Astro.props;
   html {
     font-family: "Karla Variable", "Rajdhani", "Exo 2 Variable", system-ui,
       sans-serif;
-    background: rgb(255, 255, 255);
+    background: #3a1d86;
   }
 
   body {
@@ -54,6 +54,13 @@ const { description, title } = Astro.props;
     /* Fuente */
     font-family: "Karla Variable", "Rajdhani", "Exo 2 Variable", sans-serif;
     color: white;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>
 
