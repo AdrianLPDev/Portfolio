@@ -8,38 +8,42 @@ import Mail from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
   title="Portfolio Adrián López - Desarrollador y Programador Web"
   description="Contrata a Adrián López - Desarrollador y Programador Web para ayudar a crear tu aplicación web. Creación de aplicaciones Web."
 >
-  <main>
+  <main class="px-4">
     <SectionContainer class="parent pt-40 pb-0">
-      <img
-        class="img size-20 rounded-full"
-        src="https://media.licdn.com/dms/image/C5603AQEoBKtVCFskRQ/profile-displayphoto-shrink_800_800/0/1635428384893?e=2147483647&v=beta&t=ShwsElyXwtvWIsPFBin4pslN2yM9J0Up-aO7ow2Qceo"
-        alt="Adrian Lopez Foto"
-      />
+      <div class="pt-40 lg:pt-30 ">
+        <img
+          class="img size-20 rounded-full"
+          src="https://media.licdn.com/dms/image/C5603AQEoBKtVCFskRQ/profile-displayphoto-shrink_800_800/0/1635428384893?e=2147483647&v=beta&t=ShwsElyXwtvWIsPFBin4pslN2yM9J0Up-aO7ow2Qceo"
+          alt="Adrian Lopez Foto"
+        />
+      </div>
       <h1
-        class="text1 text-white text-4xl font-extrabold inline-flex flex-row items-center gap-4 with-100vw"
+        class="text1 text-white text-2xl lg:text-4xl md:text-4xl font-extrabold inline-flex flex-row items-center gap-4 lg-pr-0"
       >
         ¡Hola!
       </h1>
       <h2
-        class="text2 text-white text-3xl font-extrabold inline-flex flex-row items-center gap-5"
+        class="text2 text-white text-xl lg:text-3xl md:text-3xl font-extrabold inline-flex flex-row items-center gap-5 lg-pl-0"
       >
         Soy Adrián López
-        <div class="my-5 flex justify-center items-center">
+        <div class="my-5 flex justify-center items-center lg:text-xs lg:w-[100px]">
           <Badge
             href="https://www.linkedin.com/in/adri%C3%A1n-l%C3%B3pez-desarrollo-web/"
-            class="my-5 flex items-center"
+            class="my-5 flex items-center lg:text-xs lg:w-[100px]"
           >
             Disponible para trabajar
           </Badge>
         </div>
       </h2>
-      <h3 class="text3 text-white text-xl">
+      <h3 class="text3 text-white text-xl text-wrap max-w-[740px]">
         <span>+2 años de Experiencia.</span>
         <span class="text-yellow-200/80"> Desarrollador web</span>.
         <span class="text-purple-100/80"> De Valladolid, España</span>.
@@ -48,50 +52,52 @@ import Briefcase from "../components/icons/Briefcase.astro";
     </SectionContainer>
 
     <nav class="w-full lg:w-[740px] mx-auto pb-40">
-      <ul class="w-full lg:w-[740px] mx-auto flex flex-row items-center gap-5">
+      <ul
+        class="w-full lg:w-[740px] mx-auto flex flex-row items-center gap-5 flex-wrap"
+      >
         <li>
           <SocialPill
             href="https://www.linkedin.com/in/adri%C3%A1n-l%C3%B3pez-desarrollo-web/"
           >
-            <LinkedInIcon class="size-6" />
+            <LinkedInIcon class="size-4 md:size-6" />
             LinkedIn
           </SocialPill>
         </li>
         <li>
           <SocialPill href="https://github.com/Kratogans">
-            <GitHub class="size-6" />
+            <GitHub class="size-4 md:size-6" />
             Github
           </SocialPill>
         </li>
         <li>
           <SocialPill href="mailto:adrianlopezpastor@gmail.com">
-            <Mail class="size-6" />
+            <Mail class="size-4 md:size-6" />
             AdrianLopezPastor@gmail.com
           </SocialPill>
         </li>
       </ul>
     </nav>
 
-    <SectionContainer class="pb-0">
+    <SectionContainer id="experiencia" class="pb-0">
       <h2
         class="text-white text-2xl font-semibold mb-5 flex gap-x-2 items-center"
       >
-        <Briefcase class="size-5" />
+        <Briefcase class="size-6" />
         Experiencia Laboral
       </h2>
       <Experience />
     </SectionContainer>
 
-    <!-- <SectionContainer id="proyectos">
+<SectionContainer id="proyectos">
       <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
       >
         <CodeIcon class="size-7" />
         Proyectos
       </h2>
       <Projects />
     </SectionContainer>
-
+    <!-- 
     <SectionContainer id="sobre-mi">
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
@@ -105,6 +111,9 @@ import Briefcase from "../components/icons/Briefcase.astro";
 </Layout>
 
 <style>
+  main > .parent > div {
+    min-width: 80px !important;
+  }
   .img {
     grid-area: 1 / 1 / 2 / 2;
   }
