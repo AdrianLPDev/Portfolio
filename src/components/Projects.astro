@@ -1,0 +1,165 @@
+---
+import GitHub from "./icons/Github.astro";
+import LinkButton from "./LinkButton.astro";
+
+import Tailwind from "./icons/Tailwind.astro";
+import NodeJs from "./icons/Node.astro";
+import Html from "./icons/Html.astro";
+import Css from "./icons/Css.astro";
+import Javascript from "./icons/Javascript.astro";
+import Java from "./icons/Java.astro";
+import Php from "./icons/Php.astro";
+import Axios from "./icons/Axios.astro";
+import Mysql from "./icons/Mysql.astro";
+
+const TAGS = {
+    HTML: {
+        name: "HTML",
+        class: "bg-[#003159] text-white",
+        icon: Html,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-[#003159] text-white",
+        icon: Css,
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "bg-[#003159] text-white",
+        icon: Tailwind,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-[#003159] text-white",
+        icon: Javascript,
+    },
+    AXIOS: {
+        name: "Axios",
+        class: "bg-[#003159] text-white",
+        icon: Axios,
+    },
+    NODE: {
+        name: "Node.js",
+        class: "bg-black text-white",
+        icon: NodeJs,
+    },
+    JAVA: {
+        name: "Java",
+        class: "bg-[#003159] text-white",
+        icon: Java,
+    },
+    PHP: {
+        name: "Java",
+        class: "bg-[#003159] text-white",
+        icon: Php,
+    },
+    MYSQL: {
+        name: "MySQL",
+        class: "bg-[#003159] text-white",
+        icon: Mysql,
+    },
+
+};
+
+const PROJECTS = [
+    {
+        title: "Wordlabras - Clone de Wordle con BBDD y Ranking",
+        description:
+            "Aplicación web para jugar como si fuese un Wordle con una opción de Login, con una BBDD por detrás y un sistema de Ranking (Basado en puntuaciones)",
+        link: "#",
+        github: "https://github.com/Kratogans/Wordlabras",
+        image: "https://via.placeholder.com/600x400",
+        youtube: "#",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.PHP, TAGS.MYSQL, TAGS.AXIOS],
+    },
+    {
+        title: "Tienda - Carrito de Compra",
+        description:
+            "Aplicación web que simula una tienda con una vista sencilla para simular el carrito/cesta de la compra con PHP y una base de datos MySQL",
+        link: "#",
+        github: "https://github.com/Kratogans/Wordlabras",
+        image: "https://via.placeholder.com/600x400",
+        youtube: "#",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.PHP, TAGS.MYSQL, TAGS.AXIOS],
+    },
+    {
+        title: "Witter - Red Social",
+        description:
+            "Aplicación web para jugar a un Wordle con una opción de Login",
+        link: "#",
+        github: "https://github.com/Kratogans/Wordlabras",
+        image: "https://via.placeholder.com/600x400",
+        youtube: "#",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.PHP, TAGS.MYSQL, TAGS.AXIOS],
+    },
+];
+---
+
+{
+    PROJECTS.map(
+        ({ image, title, description, tags, link, github, youtube }) => (
+            <article>
+                <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+                    {title}
+                </h3>
+                <p class="text-lg mb-4 text-pretty">{description}</p>
+                <ul class="flex gap-x-2 flex-row mb-2">
+                    {tags.map((tag) => (
+                        <li>
+                            <span
+                                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                            >
+                                <tag.icon class="size-4" />
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+                <img
+                    loading="lazy"
+                    class="rounded shadow-2xl shadow-white/10 aspect-video"
+                    src={image}
+                    alt={`Captura de pantalla del proyecto ${image}`}
+                />
+                <footer class="flex gap-x-4 items-end justify-start mt-4">
+                    {github && (
+                        <LinkButton href={github}>
+                            <GitHub class="size-6" />
+                            Ver código fuente
+                        </LinkButton>
+                    )}
+                    <LinkButton href={link}>
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <>
+                                <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                />
+                                <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
+                                <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
+                                <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
+                                <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
+                                <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
+                                <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
+                                <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
+                                <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
+                                <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
+                            </>
+                        </svg>
+                        Ir al sitio web
+                    </LinkButton>
+                </footer>
+            </>
+        ),
+    )
+}
