@@ -30,11 +30,11 @@ const { description, title } = Astro.props;
         class="absolute inset-0 -z-10 h-fu100% w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
       >
       </div>
+      <Header />
     </div>
     <div
-      class="relative mx-auto h-screen w-full max-w-7xl px-6 md:px-8 lg:px-12"
+      class="relative md:mx-auto lg:h-screen lg:w-full lg:max-w-7xl mx-0 px-0 sm:px-6 md:px-8 lg:px-12"
     >
-      <Header />
       <slot />
       <Footer />
     </div>
@@ -65,6 +65,15 @@ const { description, title } = Astro.props;
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    html {
+      font-size: 14px;
+    }
+    body {
+      width: 140vw;
     }
   }
 </style>
