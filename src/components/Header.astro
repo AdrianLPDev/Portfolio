@@ -11,9 +11,10 @@ const navItems = [
     url: "/#proyectos",
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    title: "Descargar CV",
+    label: "descargar-CV",
+    target: "_blank",
+    url: "https://drive.google.com/file/d/1AbOFTVWH83SfSWMlQ1T1aINouMDKVcyv/view?usp=drivesdk",
   },
   {
     title: "Contacto",
@@ -30,6 +31,8 @@ const navItems = [
               <a
                 class="hover:bg-white/10 p-1 rounded-full px-2 sm:px-3 transition ease-in text-sm sm:text-base capitalize"
                 aria-label={link.label}
+                target={link.target}
+                rel="noopener noreferrer"
                 href={link.url}
               >
                 {link.title}
