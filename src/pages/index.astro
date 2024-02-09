@@ -17,7 +17,7 @@ import Projects from "../components/Projects.astro";
   description="Contrata a Adrián López - Desarrollador y Programador Web para ayudar a crear tu aplicación web. Creación de aplicaciones Web."
 >
   <main class="px-4">
-    <SectionContainer class="parent pt-40 pb-0">
+    <SectionContainer class="parent pt-30 pb-0">
       <div class="pt-40 lg:pt-30">
         <a href="https://postimg.cc/LnnK1dSR" class="w-100" target="_blank">
           <img
@@ -115,6 +115,11 @@ import Projects from "../components/Projects.astro";
 </Layout>
 
 <style>
+  @media screen and (max-width: 400px){
+    main {
+      width:140%;
+    }
+  }
   main > .parent > div {
     min-width: 80px !important;
   }
