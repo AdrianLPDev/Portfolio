@@ -13,6 +13,7 @@ import Java from "./icons/Java.astro";
 import Php from "./icons/Php.astro";
 import Axios from "./icons/Axios.astro";
 import Mysql from "./icons/Mysql.astro";
+import Mongodb from "./icons/Mongodb.astro";
 
 
 const TAGS = {
@@ -59,8 +60,13 @@ const TAGS = {
     MYSQL: {
         name: "MySQL",
         class: "bg-[#003159] text-white",
-        icon: Mysql,
+        icon: Mongodb,
     },
+    MONGODB: {
+        name: "MongoDB",
+        class: "bg-[#003159] text-white",
+        icon: Mysql,
+    }
 };
 
 const PROJECTS = [
@@ -114,7 +120,7 @@ const PROJECTS = [
             "Llamada sencilla a la API de una librería llamada 'nanoid' junto con el uso de una BBDD para guardar el token generado y comprobar en la BBDD que no exista otro igual",
         github: "https://github.com/AdrianLPDev/URLShortener-ALPDev",
         image: "projects/URLShort.webp",
-        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.AXIOS],
+        tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.MONGODB],
     }
 
 ];
