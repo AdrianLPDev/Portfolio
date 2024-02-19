@@ -58,7 +58,6 @@ const TAGS = {
         class: "bg-[#003159] text-white",
         icon: Mysql,
     },
-
 };
 
 const PROJECTS = [
@@ -70,7 +69,14 @@ const PROJECTS = [
         github: "https://github.com/Kratogans/Wordlabras",
         image: "projects/wordlabras-portfolio.webp",
         youtube: "#",
-        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.PHP, TAGS.MYSQL, TAGS.AXIOS],
+        tags: [
+            TAGS.HTML,
+            TAGS.CSS,
+            TAGS.JAVASCRIPT,
+            TAGS.PHP,
+            TAGS.MYSQL,
+            TAGS.AXIOS,
+        ],
     },
     {
         title: "Tienda - Carrito de Compra",
@@ -93,7 +99,7 @@ const PROJECTS = [
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.MYSQL],
     },
     {
-    title: "PokeApi",
+        title: "PokeApi",
         description:
             "Llamada sencilla a la API usando su documentación a través de la librería axios",
         link: "#",
@@ -101,7 +107,7 @@ const PROJECTS = [
         image: "projects/PokeApi.webp",
         youtube: "#",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.AXIOS],
-    }
+    },
 ];
 ---
 
@@ -138,38 +144,32 @@ const PROJECTS = [
                             Ver código fuente
                         </LinkButton>
                     )}
-                    <LinkButton href={link}>
+                    {youtube && (
+                        <LinkButton href={youtube}>
                         <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            viewBox="0 0 256 180"
+                            width="256"
+                            height="180"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid"
                         >
                             <>
                                 <path
-                                    stroke="none"
-                                    d="M0 0h24v24H0z"
-                                    fill="none"
+                                    d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z"
+                                    fill="red"
                                 />
-                                <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
-                                <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
-                                <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
-                                <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
-                                <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
-                                <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
-                                <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
-                                <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
-                                <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
+                                <path
+                                    fill="#FFF"
+                                    d="m102.421 128.06 66.328-38.418-66.328-38.418z"
+                                />
                             </>
                         </svg>
-                        Ir al sitio web
+                        Ver video demo
                     </LinkButton>
+                    )}
+                    
                 </footer>
-            </>
+            </article>
         ),
     )
 }
