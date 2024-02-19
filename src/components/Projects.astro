@@ -65,10 +65,8 @@ const PROJECTS = [
         title: "Wordlabras - Clone de Wordle con BBDD y Ranking",
         description:
             "Aplicación web para jugar como si fuese un Wordle con una opción de Login, con una BBDD por detrás y un sistema de Ranking (Basado en puntuaciones)",
-        link: "#",
         github: "https://github.com/Kratogans/Wordlabras",
         image: "projects/wordlabras-portfolio.webp",
-        youtube: "#",
         tags: [
             TAGS.HTML,
             TAGS.CSS,
@@ -102,10 +100,8 @@ const PROJECTS = [
         title: "PokeApi",
         description:
             "Llamada sencilla a la API usando su documentación a través de la librería axios",
-        link: "#",
         github: "https://github.com/AdrianLPDev/PokeApi",
         image: "projects/PokeApi.webp",
-        youtube: "#",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.AXIOS],
     },
 ];
@@ -115,7 +111,7 @@ const PROJECTS = [
     PROJECTS.map(
         ({ image, title, description, tags, link, github, youtube }) => (
             <article class="pb-10">
-                <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+                <h3 class="text-2xl font-semibold text-yellow-600 dark:text-yellow-200 mb-2">
                     {title}
                 </h3>
                 <p class="text-lg mb-4 text-pretty">{description}</p>
