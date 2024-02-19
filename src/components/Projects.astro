@@ -1,7 +1,9 @@
 ---
-import GitHub from "./icons/Github.astro";
-import LinkButton from "./LinkButton.astro";
 import Youtube from "./icons/Youtube.astro";
+import GitHub from "./icons/Github.astro";
+
+import LinkButton from "./LinkButton.astro";
+
 import Tailwind from "./icons/Tailwind.astro";
 import NodeJs from "./icons/Node.astro";
 import Html from "./icons/Html.astro";
@@ -11,6 +13,7 @@ import Java from "./icons/Java.astro";
 import Php from "./icons/Php.astro";
 import Axios from "./icons/Axios.astro";
 import Mysql from "./icons/Mysql.astro";
+
 
 const TAGS = {
     HTML: {
@@ -87,6 +90,15 @@ const PROJECTS = [
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.PHP, TAGS.MYSQL],
     },
     {
+        title: "ShortURL",
+        description:
+            "Llamada sencilla a la API usando su documentación a través de la librería axios",
+        github: "https://github.com/AdrianLPDev/PokeApi",
+        image: "projects/PokeApi.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.AXIOS],
+        
+    },
+    {
         title: "Witter - Red Social",
         description:
             "Una simulación de una red social sencilla con PHP y una base de datos MySQL",
@@ -97,13 +109,14 @@ const PROJECTS = [
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.MYSQL],
     },
     {
-        title: "PokeApi",
+        title: "URLShortener",
         description:
-            "Llamada sencilla a la API usando su documentación a través de la librería axios",
-        github: "https://github.com/AdrianLPDev/PokeApi",
-        image: "projects/PokeApi.webp",
+            "Llamada sencilla a la API de una librería llamada 'nanoid' junto con el uso de una BBDD para guardar el token generado y comprobar en la BBDD que no exista otro igual",
+        github: "https://github.com/AdrianLPDev/URLShortener-ALPDev",
+        image: "projects/URLShort.webp",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.AXIOS],
-    },
+    }
+
 ];
 ---
 
